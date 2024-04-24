@@ -35,4 +35,7 @@ urlpatterns = [
     path('UpdateStudentDetails', views.UPDATE_STUDENTS_DETAILS, name='update_student_details'),  
     path('data-between-dates/', views.data_between_dates, name='data_between_dates'),  
     path('search-students/', views.Search_Students, name='search-students'), 
-]+static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
